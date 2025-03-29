@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes app-demo-slide {
+  0%, 30% {
+    transform: translateX(0);
+  }
+  33.33%, 63.33% {
+    transform: translateX(-100%);
+  }
+  66.66%, 96.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-app-demo-slide {
+  display: flex;
+  animation: app-demo-slide 20s infinite;
+}
+
 @layer base {
   * {
     @apply border-border;

@@ -80,25 +80,162 @@ export default function AppDemo() {
           </div>
           
           <div className="md:w-1/2 relative">
-            <div className="relative z-20 transform -rotate-6">
-              <img 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt={t.appDemo.mainImageAlt} 
-                className="rounded-xl shadow-2xl" 
-                width="500" 
-                height="350"
-              />
-              <div className="absolute -bottom-20 -right-10 w-3/4">
-                <img 
-                  src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt={t.appDemo.secondaryImageAlt} 
-                  className="rounded-xl shadow-2xl transform rotate-12" 
-                  width="350" 
-                  height="250"
-                />
+            <div className="relative z-20">
+              {/* Smartphone device frame */}
+              <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl overflow-hidden">
+                <div className="w-[148px] h-[18px] bg-gray-800 absolute top-0 right-[70px] rounded-b-[1rem] z-20"></div>
+                <div className="h-[46px] w-[3px] bg-gray-800 absolute top-[124px] left-[-17px] rounded-t-xl rounded-b-xl"></div>
+                <div className="h-[46px] w-[3px] bg-gray-800 absolute top-[178px] left-[-17px] rounded-t-xl rounded-b-xl"></div>
+                <div className="h-[64px] w-[3px] bg-gray-800 absolute top-[124px] right-[-17px] rounded-t-xl rounded-b-xl"></div>
+                
+                {/* App demo animation */}
+                <div className="h-full w-full overflow-hidden relative">
+                  <div className="h-full w-full animate-app-demo-slide">
+                    {/* Screen 1: Dashboard */}
+                    <div className="min-w-[272px] h-[572px] bg-white flex flex-col">
+                      <div className="h-14 bg-primary-600 flex items-center px-4">
+                        <div className="text-white font-bold">AseoSmart</div>
+                        <div className="ml-auto flex space-x-2">
+                          <div className="w-4 h-4 rounded-full bg-white opacity-60"></div>
+                          <div className="w-4 h-4 rounded-full bg-white"></div>
+                        </div>
+                      </div>
+                      <div className="flex-1 overflow-y-auto p-4">
+                        <div className="text-lg font-bold mb-4">Resumen de hoy</div>
+                        <div className="bg-green-100 rounded-lg p-3 border border-green-200 mb-4 flex items-center">
+                          <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white mr-3">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                          </div>
+                          <div>
+                            <div className="font-medium">Limpieza completada</div>
+                            <div className="text-xs text-green-700">Apt. 301 - 10:45 AM</div>
+                          </div>
+                        </div>
+                        <div className="bg-blue-100 rounded-lg p-3 border border-blue-200 mb-4 flex items-center">
+                          <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white mr-3">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                          </div>
+                          <div>
+                            <div className="font-medium">Próxima limpieza</div>
+                            <div className="text-xs text-blue-700">Apt. 502 - 15:30 PM</div>
+                          </div>
+                        </div>
+                        <div className="text-lg font-bold mt-6 mb-3">Propiedades</div>
+                        {[1, 2, 3].map((item) => (
+                          <div key={item} className="bg-gray-100 rounded-lg p-3 mb-3 border border-gray-200">
+                            <div className="font-medium">Apartamento {item * 100 + Math.floor(Math.random() * 10)}</div>
+                            <div className="flex justify-between items-center mt-2">
+                              <div className="text-xs text-gray-500">Última limpieza: Ayer</div>
+                              <div className="bg-primary-100 text-primary-800 text-xs px-2 py-1 rounded">Activo</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Screen 2: Notification */}
+                    <div className="min-w-[272px] h-[572px] bg-white flex flex-col">
+                      <div className="h-14 bg-primary-600 flex items-center px-4">
+                        <div className="text-white font-bold">Notificaciones</div>
+                      </div>
+                      <div className="flex-1 overflow-y-auto p-4">
+                        <div className="bg-yellow-50 rounded-lg p-4 border border-yellow-200 mb-4">
+                          <div className="flex items-center">
+                            <div className="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-white mr-3">
+                              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                            </div>
+                            <div className="font-bold text-lg">¡Nuevo checkout!</div>
+                          </div>
+                          <div className="mt-3">
+                            <div className="font-medium">Apartamento 301</div>
+                            <div className="text-sm text-gray-600 mb-2">Checkout registrado hace 5 minutos</div>
+                            <div className="flex space-x-2 mt-4">
+                              <button className="flex-1 bg-primary-500 text-white py-2 rounded-lg text-sm font-medium">Aceptar tarea</button>
+                              <button className="flex-1 bg-gray-200 text-gray-800 py-2 rounded-lg text-sm font-medium">Detalles</button>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="text-sm font-medium text-gray-500 my-3">Anteriores</div>
+                        
+                        {[1, 2, 3].map((item) => (
+                          <div key={item} className="bg-gray-100 rounded-lg p-3 mb-3 border border-gray-200">
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center text-white mr-2">
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                              </div>
+                              <div>
+                                <div className="font-medium">Apt. {item * 100 + Math.floor(Math.random() * 10)}</div>
+                                <div className="text-xs text-gray-500">Hace {item} día{item > 1 ? 's' : ''}</div>
+                              </div>
+                              <div className="ml-auto text-xs bg-gray-200 px-2 py-1 rounded">Completada</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Screen 3: Checklist */}
+                    <div className="min-w-[272px] h-[572px] bg-white flex flex-col">
+                      <div className="h-14 bg-primary-600 flex items-center px-4">
+                        <div className="text-white font-bold">Limpieza en progreso</div>
+                      </div>
+                      <div className="flex-1 overflow-y-auto p-4">
+                        <div className="text-lg font-bold mb-2">Apt. 301</div>
+                        <div className="text-sm text-gray-600 mb-4">Checklist de limpieza</div>
+                        
+                        <div className="mb-6">
+                          <div className="flex items-center mb-2">
+                            <div className="w-5 h-5 rounded border border-primary-500 flex items-center justify-center bg-primary-500 mr-3">
+                              <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div className="text-gray-700 line-through">Habitación principal</div>
+                          </div>
+                          <div className="flex items-center mb-2">
+                            <div className="w-5 h-5 rounded border border-primary-500 flex items-center justify-center bg-primary-500 mr-3">
+                              <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div className="text-gray-700 line-through">Habitación de invitados</div>
+                          </div>
+                          <div className="flex items-center mb-2">
+                            <div className="w-5 h-5 rounded border border-primary-500 flex items-center justify-center bg-primary-500 mr-3">
+                              <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div className="text-gray-700 line-through">Baño principal</div>
+                          </div>
+                          <div className="flex items-center mb-2">
+                            <div className="w-5 h-5 rounded border border-primary-500 mr-3"></div>
+                            <div className="text-gray-700">Cocina</div>
+                          </div>
+                          <div className="flex items-center mb-2">
+                            <div className="w-5 h-5 rounded border border-primary-500 mr-3"></div>
+                            <div className="text-gray-700">Sala de estar</div>
+                          </div>
+                          <div className="flex items-center mb-2">
+                            <div className="w-5 h-5 rounded border border-primary-500 mr-3"></div>
+                            <div className="text-gray-700">Terraza</div>
+                          </div>
+                        </div>
+                        
+                        <div className="border-t border-gray-200 pt-4 mt-4">
+                          <div className="text-sm font-medium mb-2">Tomar foto</div>
+                          <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center mb-4">
+                            <svg className="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                          </div>
+                        </div>
+                        
+                        <button className="w-full bg-primary-500 text-white py-3 rounded-lg text-sm font-medium mt-2">
+                          Completar limpieza
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary-300 rounded-full opacity-10 filter blur-3xl"></div>
+            
+            {/* Background glow effect */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary-300 rounded-full opacity-20 filter blur-3xl"></div>
           </div>
         </div>
       </div>
