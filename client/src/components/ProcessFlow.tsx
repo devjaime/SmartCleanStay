@@ -40,9 +40,9 @@ export default function ProcessFlow() {
             </div>
             <div className="md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1558002038-176fd6d7402d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                 alt={t.processFlow.steps[0].imageAlt} 
-                className="rounded-lg shadow-xl w-full h-auto" 
+                className="rounded-lg shadow-xl w-full h-auto object-cover" 
                 width="500" 
                 height="300"
               />
@@ -67,9 +67,9 @@ export default function ProcessFlow() {
             </div>
             <div className="md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                 alt={t.processFlow.steps[1].imageAlt} 
-                className="rounded-lg shadow-xl w-full h-auto" 
+                className="rounded-lg shadow-xl w-full h-auto object-cover" 
                 width="500" 
                 height="300"
               />
@@ -94,9 +94,9 @@ export default function ProcessFlow() {
             </div>
             <div className="md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1586155896461-0d7081ad6b50?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                 alt={t.processFlow.steps[2].imageAlt} 
-                className="rounded-lg shadow-xl w-full h-auto" 
+                className="rounded-lg shadow-xl w-full h-auto object-cover" 
                 width="500" 
                 height="300"
               />
@@ -121,9 +121,9 @@ export default function ProcessFlow() {
             </div>
             <div className="md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1567789884554-0b844b6eebc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                 alt={t.processFlow.steps[3].imageAlt} 
-                className="rounded-lg shadow-xl w-full h-auto" 
+                className="rounded-lg shadow-xl w-full h-auto object-cover" 
                 width="500" 
                 height="300"
               />
@@ -132,8 +132,9 @@ export default function ProcessFlow() {
         </div>
       </div>
       
-      {/* CSS for the process line */}
-      <style jsx>{`
+      {/* We use inline styles for the process line */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .process-line::before {
           content: '';
           position: absolute;
@@ -152,7 +153,7 @@ export default function ProcessFlow() {
             height: calc(100% - 80px);
           }
         }
-      `}</style>
+      `}} />
     </section>
   );
 }
