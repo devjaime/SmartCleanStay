@@ -522,7 +522,7 @@ export const translations = {
         },
         {
           question: "¿Cuánto cuesta el servicio?",
-          answer: "Ofrecemos planes flexibles según el número de propiedades. Contamos con un plan básico desde 19€/mes por propiedad que incluye todas las funcionalidades principales. Contacta con nosotros para un presupuesto personalizado."
+          answer: "Ofrecemos planes flexibles según el número de propiedades. Contamos con un plan básico desde 65990 CLP /mes  por propiedad que incluye todas las funcionalidades principales. Contacta con nosotros para un presupuesto personalizado."
         },
         {
           question: "¿Funciona con todo tipo de propiedades?",
