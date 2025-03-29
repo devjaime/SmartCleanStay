@@ -189,7 +189,7 @@ export const translations = {
           rating: 4.5,
           quote: "I manage 15 properties and it used to be chaos coordinating the cleaning staff. This system optimizes routes and has reduced my operating costs by 30%. An investment that pays for itself.",
           name: "Laura Fernández",
-          properties: "Manager of 15 properties in Madrid",
+          properties: "Manager of 15 properties in santiago",
           avatar: "https://randomuser.me/api/portraits/women/68.jpg"
         }
       ]
@@ -295,7 +295,7 @@ export const translations = {
       },
       contact: {
         title: "Contact",
-        address: "Example Street 123, 28001 Madrid, Spain",
+        address: "Example Street 123, 28001 santiago, Spain",
         phone: "+34 91 123 45 67",
         email: "info@aseosmart.com"
       },
@@ -499,7 +499,7 @@ export const translations = {
           rating: 4.5,
           quote: "Gestiono 15 propiedades y antes era un caos coordinar al personal de limpieza. Este sistema optimiza las rutas y ha reducido mis costes operativos en un 30%. Una inversión que se paga sola.",
           name: "Laura Fernández",
-          properties: "Gestora de 15 propiedades en Madrid",
+          properties: "Gestora de 15 propiedades en santiago",
           avatar: "https://randomuser.me/api/portraits/women/68.jpg"
         }
       ]
@@ -605,11 +605,11 @@ export const translations = {
       },
       contact: {
         title: "Contacto",
-        address: "Calle Ejemplo 123, 28001 Madrid, España",
-        phone: "+34 91 123 45 67",
-        email: "info@aseosmart.com"
+        address: "Domingo tocornal 0621, Puente Alto",
+        phone: "+56949288019",
+        email: "hernandez.hs@gmail.com"
       },
-      copyright: "© 2023 AseoSmart. Todos los derechos reservados."
+      copyright: "© 2025 AseoSmart. Todos los derechos reservados."
     },
     thankYou: {
       pageTitle: "Gracias | AseoSmart",
