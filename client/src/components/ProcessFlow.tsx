@@ -94,7 +94,7 @@ export default function ProcessFlow() {
             </div>
             <div className="md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1554224155-8d04cb21ed6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                 alt={t.processFlow.steps[2].imageAlt} 
                 className="rounded-lg shadow-xl w-full h-auto object-cover" 
                 width="500" 
